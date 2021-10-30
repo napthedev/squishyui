@@ -1,0 +1,9 @@
+.avatar {
+  @include avatarStyle;
+  &-sm {
+    @include avatarStyle(30px);
+  }
+  &-lg {
+    @include avatarStyle(70px);
+  }
+}

@@ -1,0 +1,49 @@
+@mixin squishy($grow: 1.03, $shrink: 0.96) {
+  &:hover {
+    transform: scale($grow);
+  }
+
+  &:active {
+    transform: scale($shrink);
+  }
+}
+
+@mixin buttonStyles($text-color: $dark, $bg: $light) {
+  color: $text-color;
+  background: $bg;
+
+  border: 1px solid $bg;
+
+  &:hover {
+    background: darken($bg, 7%);
+  }
+
+  &:active {
+    background: $bg;
+    border: 1px solid $bg;
+  }
+}
+
+@mixin buttonOutlineStyles($text-color: $dark, $bg: $light) {
+  color: $bg;
+  background: transparent;
+
+  border: 1px solid $bg;
+
+  &:hover {
+    background: $bg;
+    color: $text-color;
+  }
+}
+
+@mixin alertStyles($color: $light) {
+  background: lighten($color, 40%);
+  color: darken($color, 10%);
+}
+
+@mixin avatarStyle($size: 50px) {
+  width: $size;
+  height: $size;
+  border-radius: 99999px;
+  border: thin solid $light;
+}

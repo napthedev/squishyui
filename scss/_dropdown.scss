@@ -1,0 +1,37 @@
+.dropdown {
+  position: relative;
+
+  #{&}-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    cursor: pointer;
+    border-radius: $radius;
+    overflow: hidden;
+    transition: 0.3s;
+    transform-origin: 20% 0;
+  }
+
+  &:focus-within {
+    .dropdown-list {
+      visibility: visible;
+      opacity: 1;
+      transform: scale(1);
+      background: lighten($light, 3%);
+
+      padding: 10px 0;
+
+      & > * {
+        padding: 5px 10px;
+        transition: 0.2s;
+
+        &:hover {
+          background: lighten($primary, 35%);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.collapse {
+  margin: 4px;
+
+  #{&}-head {
+    cursor: pointer;
+    padding: 12px 15px;
+    border-radius: $radius;
+    border: 1px solid $light;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include squishy(1, 0.98);
+  }
+
+  #{&}-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+    --max-height: 100vh;
+  }
+
+  #{&}-inner {
+    padding: 12px 15px;
+    border: 1px solid $light;
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+  }
+
+  #{&}-icon {
+    transition: 0.3s;
+  }
+
+  &:focus-within {
+    .collapse {
+      &-head {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        background: lighten($primary, 35%);
+      }
+      &-content {
+        max-height: var(--max-height);
+        transition: max-height 0.5s;
+        transition-timing-function: ease-in;
+      }
+      &-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

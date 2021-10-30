@@ -1,0 +1,86 @@
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 5px 11px;
+  margin: 4px 3px;
+  color: $dark;
+  background: $light;
+  border-radius: $radius;
+  transition: 0.3s;
+
+  @include squishy;
+  @include buttonStyles;
+
+  &.btn-primary {
+    @include buttonStyles(#fff, $primary);
+  }
+
+  &.btn-secondary {
+    @include buttonStyles(#fff, $secondary);
+  }
+
+  &.btn-warning {
+    @include buttonStyles($dark, $warning);
+  }
+
+  &.btn-error {
+    @include buttonStyles(#fff, $error);
+  }
+
+  &.btn-dark {
+    @include buttonStyles($light, $dark);
+  }
+
+  &:disabled {
+    filter: opacity(0.7);
+    cursor: default;
+
+    &:hover {
+      transform: scale(1);
+    }
+  }
+
+  &.no-bounce {
+    &:hover {
+      transform: scale(1);
+    }
+    &:active {
+      transform: scale(1);
+    }
+  }
+}
+
+.btn-sm {
+  font-size: 12px;
+  line-height: 20px;
+  padding: 2px 8px;
+}
+
+.btn-lg {
+  font-size: 20px;
+  line-height: 30px;
+  padding: 8px 16px;
+}
+
+.btn-outline {
+  @include buttonOutlineStyles($light, $dark);
+
+  &.btn-primary {
+    @include buttonOutlineStyles(#fff, $primary);
+  }
+
+  &.btn-secondary {
+    @include buttonOutlineStyles(#fff, $secondary);
+  }
+
+  &.btn-warning {
+    @include buttonOutlineStyles($dark, $warning);
+  }
+
+  &.btn-error {
+    @include buttonOutlineStyles(#fff, $error);
+  }
+}
