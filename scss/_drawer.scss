@@ -1,0 +1,53 @@
+.drawer {
+  &-control {
+    display: none;
+
+    &:checked {
+      & ~ .drawer-background {
+        @include show;
+      }
+      & ~ .drawer {
+        @include show;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    background: #00000080;
+    transition: 0.3s;
+
+    @include hidden;
+  }
+
+  &-header {
+    padding: 13px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d3d3d3;
+  }
+
+  &-content {
+    padding: 13px 20px;
+  }
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  max-width: 400px;
+  background: #fff;
+  z-index: 30;
+  transition: 0.3s;
+  transform: translateX(-100%);
+
+  @include hidden;
+}

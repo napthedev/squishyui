@@ -131,3 +131,27 @@
 .w-screen {
   height: 100vw;
 }
+
+.container {
+  padding: 50px 10%;
+}
+
+.squishy {
+  @include squishy;
+  transition: 0.3s;
+}
+
+.cursor-default {
+  cursor: default;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.rounded {
+  border-radius: $radius;
+}
+
+.rounded-full {
+  border-radius: 99999px;
+}

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="https://i.imgur.com/4EWErGD.png" type="image/x-icon" />
     <title>Squishy UI</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
@@ -35,6 +35,22 @@
         <img class="avatar-sm" src="https://avatars.dicebear.com/api/avataaars/8.svg" alt="" />
         <img class="avatar" src="https://avatars.dicebear.com/api/avataaars/8.svg" alt="" />
         <img class="avatar-lg" src="https://avatars.dicebear.com/api/avataaars/8.svg" alt="" />
+      </div>
+
+      <h1>Breadcrumb</h1>
+      <div class="breadcrumb">
+        <div class="breadcrumb-item">
+          <a href="#">Home</a>
+        </div>
+        <div class="breadcrumb-item">
+          <a href="#">User</a>
+        </div>
+        <div class="breadcrumb-item">
+          <a href="#">Library</a>
+        </div>
+        <div class="breadcrumb-item">
+          <a href="#">Images</a>
+        </div>
       </div>
 
       <h1>Buttons</h1>
@@ -132,6 +148,11 @@
         </button>
       </div>
 
+      <h1>Card</h1>
+      <div class="card" style="width: 400px">
+        <div class="card-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed eveniet vel, aut hic nam, reprehenderit officiis enim id, accusantium iusto quis architecto tempora iste cupiditate impedit cumque ex officia. Nisi?</div>
+      </div>
+
       <h1>Collapse</h1>
 
       <p>Accordion</p>
@@ -155,8 +176,22 @@
         </div>
       </div>
 
-      <h1>Container</h1>
-      <p>Add some margin for better spacing</p>
+      <h1>Drawer</h1>
+      <input type="checkbox" class="drawer-control" id="drawer-control" name="drawer-control" />
+      <label class="btn" for="drawer-control">Open drawer</label>
+      <label for="drawer-control" class="drawer-background"></label>
+      <div class="drawer">
+        <div class="drawer-header">
+          <h3>Drawer Title</h3>
+          <label for="drawer-control" class="cursor-pointer squishy">
+            <i class="fa fa-times" style="font-size: 25px"></i>
+          </label>
+        </div>
+        <div class="drawer-content">
+          <h3>Drawer Content</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti fugit iste temporibus mollitia, dicta veniam qui sint omnis maxime exercitationem maiores impedit libero, eius officia obcaecati harum saepe consequuntur expedita.</p>
+        </div>
+      </div>
 
       <h1>Dropdown</h1>
 
@@ -190,17 +225,6 @@
         </div>
       </div>
 
-      <h1>Tooltips</h1>
-      <button class="tooltips" data-tooltips="Top">Tooltips Top</button>
-      <button class="tooltips tooltips-bottom" data-tooltips="Bottom">Tooltips Bottom</button>
-      <button class="tooltips tooltips-left" data-tooltips="Left">Tooltips Left</button>
-      <button class="tooltips tooltips-right" data-tooltips="Right">Tooltips Right</button>
-
-      <h1>Card</h1>
-      <div class="card" style="width: 400px">
-        <div class="card-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed eveniet vel, aut hic nam, reprehenderit officiis enim id, accusantium iusto quis architecto tempora iste cupiditate impedit cumque ex officia. Nisi?</div>
-      </div>
-
       <h1>List</h1>
       <div class="list">
         <div>List Item 1</div>
@@ -211,22 +235,6 @@
         <div>List Item 6</div>
       </div>
 
-      <h1>Breadcrumb</h1>
-      <div class="breadcrumb">
-        <div class="breadcrumb-item">
-          <a href="#">Home</a>
-        </div>
-        <div class="breadcrumb-item">
-          <a href="#">User</a>
-        </div>
-        <div class="breadcrumb-item">
-          <a href="#">Library</a>
-        </div>
-        <div class="breadcrumb-item">
-          <a href="#">Images</a>
-        </div>
-      </div>
-
       <h1>Modal</h1>
       <input type="checkbox" class="modal-control" id="modal-control" name="modal-control" />
       <label class="btn" for="modal-control">Open modal</label>
@@ -234,8 +242,8 @@
       <div class="modal">
         <div class="modal-header">
           <h3>Modal Title</h3>
-          <label for="modal-control" style="cursor: pointer">
-            <svg style="width: 20px; height: 20px" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+          <label for="modal-control" class="cursor-pointer squishy">
+            <i class="fa fa-times" style="font-size: 25px"></i>
           </label>
         </div>
         <div class="modal-content">
@@ -244,12 +252,32 @@
         </div>
       </div>
 
-      <h1>Skeleton</h1>
+      <!-- Navbar -->
 
+      <h1>Progress</h1>
       <div>
-        <div class="skeleton"></div>
+        <svg class="circular-progress" viewBox="25 25 50 50">
+          <circle cx="50" cy="50" r="20"></circle>
+        </svg>
+
+        <svg style="--color: red" class="circular-progress" viewBox="25 25 50 50">
+          <circle cx="50" cy="50" r="20"></circle>
+        </svg>
+      </div>
+
+      <h1>Skeleton</h1>
+      <div>
+        <div class="skeleton rounded-full"></div>
         <div style="width: 100%; height: 100px" class="skeleton mt-3"></div>
       </div>
+
+      <h1>Tooltips</h1>
+      <button class="tooltips" data-tooltips="Top">Tooltips Top</button>
+      <button class="tooltips tooltips-bottom" data-tooltips="Bottom">Tooltips Bottom</button>
+      <button class="tooltips tooltips-left" data-tooltips="Left">Tooltips Left</button>
+      <button class="tooltips tooltips-right" data-tooltips="Right">Tooltips Right</button>
+
+      <!-- Utility Classes -->
     </div>
   </body>
 </html>
