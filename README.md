@@ -11,11 +11,19 @@
 - Badge
 - Card
 - Breadcrumb
-- Dropdown
+- Dropdown ✅
 - List
 - Modal
 - Navbar
 - Skeleton
 - Progress
 - Tooltips
+- Drawer
+- Forms
+  - Input
+  - Checkbox
+  - Radio
+  - Select
+  - Range
+  - Validation
 - Utility classes

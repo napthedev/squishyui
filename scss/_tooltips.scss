@@ -1,0 +1,39 @@
+.tooltips {
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    color: $light;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+  }
+
+  &::before {
+    content: attr(data-tooltips);
+    background: $dark;
+    top: -40px;
+    white-space: nowrap;
+    width: max-content;
+    border-radius: $radius;
+    padding: 2px 6px;
+  }
+
+  &::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top: 10px solid $dark;
+    top: -15px;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+}

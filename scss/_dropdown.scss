@@ -1,5 +1,10 @@
 .dropdown {
   position: relative;
+  display: inline;
+
+  & > *:first-child {
+    cursor: pointer;
+  }
 
   #{&}-list {
     position: absolute;
@@ -13,6 +18,29 @@
     overflow: hidden;
     transition: 0.3s;
     transform-origin: 20% 0;
+    z-index: 10;
+    white-space: nowrap;
+    width: max-content;
+
+    & > * {
+      padding: 5px 10px;
+      transition: 0.2s;
+      border-bottom: thin solid $light;
+
+      &:hover {
+        background: lighten($primary, 35%);
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  #{&}-left {
+    left: auto;
+    right: 0;
+    transform-origin: 80% 0;
   }
 
   &:focus-within {
@@ -23,15 +51,6 @@
       background: lighten($light, 3%);
 
       padding: 10px 0;
-
-      & > * {
-        padding: 5px 10px;
-        transition: 0.2s;
-
-        &:hover {
-          background: lighten($primary, 35%);
-        }
-      }
     }
   }
 }
