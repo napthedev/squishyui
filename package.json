@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "sass scss/main.scss css/main.css --watch",
-    "build": "sass scss/main.scss build/squishy-ui.min.css --style=compressed --no-source-map"
+    "dev": "sass scss/main.scss dist/main.css --watch",
+    "build": "sass scss/main.scss dist/css/main.css --style=compressed --no-source-map && cpx index.html dist"
   },
   "keywords": [],
   "author": "napthedev",
   "license": "ISC",
   "devDependencies": {
+    "cpx": "^1.5.0",
     "sass": "^1.43.4"
   }
 }
