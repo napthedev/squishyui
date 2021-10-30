@@ -17,7 +17,7 @@
 - Navbar
 - Skeleton
 - Progress
-- Tooltips
+- Tooltips ✅
 - Drawer
 - Forms
   - Input

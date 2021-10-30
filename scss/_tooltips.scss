@@ -26,14 +26,60 @@
     content: "";
     width: 0;
     height: 0;
-    border: 10px solid transparent;
-    border-top: 10px solid $dark;
-    top: -15px;
+    border: 6px solid transparent;
+    border-top: 6px solid $dark;
+    top: -13px;
   }
 
   &:hover::before,
   &:hover::after {
     opacity: 1;
     visibility: visible;
+  }
+
+  &-bottom {
+    &::before {
+      top: auto;
+      bottom: -40px;
+    }
+    &::after {
+      top: auto;
+      bottom: -13px;
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid $dark;
+    }
+  }
+
+  &-left {
+    &::before {
+      top: 50%;
+      left: auto;
+      right: calc(100% + 16px);
+      transform: translateY(-50%);
+    }
+    &::after {
+      top: 50%;
+      left: auto;
+      right: calc(100% + 4px);
+      transform: translateY(-50%);
+      border-top: 6px solid transparent;
+      border-left: 6px solid $dark;
+    }
+  }
+  &-right {
+    &::before {
+      top: 50%;
+      right: auto;
+      left: calc(100% + 16px);
+      transform: translateY(-50%);
+    }
+    &::after {
+      top: 50%;
+      right: auto;
+      left: calc(100% + 4px);
+      transform: translateY(-50%);
+      border-top: 6px solid transparent;
+      border-right: 6px solid $dark;
+    }
   }
 }
