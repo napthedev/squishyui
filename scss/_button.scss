@@ -43,15 +43,6 @@ button {
       transform: scale(1);
     }
   }
-
-  &.no-bounce {
-    &:hover {
-      transform: scale(1);
-    }
-    &:active {
-      transform: scale(1);
-    }
-  }
 }
 
 .btn-sm {

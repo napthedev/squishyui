@@ -61,6 +61,14 @@ $sizing: (
   50: 50%,
   75: 75%,
   100: 100%,
+  full: 100%,
+);
+
+$text-aligns: (
+  text-left: left,
+  text-center: center,
+  text-right: right,
+  text-justify: justify,
 );
 
 $radius: 5px;

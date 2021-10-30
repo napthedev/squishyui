@@ -19,12 +19,9 @@ A CSS Only Framework for your application
 - Drawer ✅
 - Dropdown ✅
 - Forms
-  - Input
-  - Checkbox
-  - Radio
-  - Select
-  - Range
-  - Validation
+  - Input ✅
+  - Checkbox ✅
+  - Radio ✅
 - List ✅
 - Modal ✅
 - Navbar
@@ -33,6 +30,7 @@ A CSS Only Framework for your application
 - Tooltips ✅
 
 - Utility classes ✅
+  - Squishy
   - Color ✅
   - Background color ✅
   - Padding ✅
@@ -44,7 +42,10 @@ A CSS Only Framework for your application
     - Justify Content ✅
     - Align Items ✅
     - Wrap ✅
+  - Gap ✅
   - Width, height ✅
   - Container ✅
   - Cursor ✅
   - Border Radius ✅
+  - Responsive Image ✅
+  - Text Align ✅

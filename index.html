@@ -11,7 +11,12 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="ml-3">Alert</h1>
+      <div class="flex flex-col items-center">
+        <img class="responsive-image" src="https://i.imgur.com/ffkMKUe.png" alt="" />
+        <h2 class="text-center">The CSS Only framework for your application</h2>
+      </div>
+
+      <h1 class="ml-2">Alert</h1>
 
       <div>
         <div class="alert">Normal Alert</div>
@@ -21,7 +26,7 @@
         <div class="alert alert-error">Error Alert</div>
       </div>
 
-      <h1>Avatar</h1>
+      <h1 class="ml-2 mt-5">Avatar</h1>
 
       <p>Rounded Avatar</p>
       <div>
@@ -37,7 +42,7 @@
         <img class="avatar-lg" src="https://avatars.dicebear.com/api/avataaars/8.svg" alt="" />
       </div>
 
-      <h1>Breadcrumb</h1>
+      <h1 class="ml-2 mt-5">Breadcrumb</h1>
       <div class="breadcrumb">
         <div class="breadcrumb-item">
           <a href="#">Home</a>
@@ -53,7 +58,7 @@
         </div>
       </div>
 
-      <h1>Buttons</h1>
+      <h1 class="ml-2 mt-5">Buttons</h1>
 
       <p>Colors</p>
       <div>
@@ -115,13 +120,8 @@
         <button disabled class="btn-dark">Dark</button>
       </div>
 
-      <p>No bounce</p>
-      <div>
-        <button class="no-bounce">No bounce button</button>
-      </div>
-
       <p>Badge</p>
-      <div>
+      <div class="flex gap-3 wrap">
         <button>
           Normal
           <span class="btn-badge">9+</span>
@@ -148,20 +148,20 @@
         </button>
       </div>
 
-      <h1>Card</h1>
+      <h1 class="ml-2 mt-5">Card</h1>
       <div class="card" style="width: 400px">
         <div class="card-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed eveniet vel, aut hic nam, reprehenderit officiis enim id, accusantium iusto quis architecto tempora iste cupiditate impedit cumque ex officia. Nisi?</div>
       </div>
 
-      <h1>Collapse</h1>
+      <h1 class="ml-2 mt-5">Collapse</h1>
 
       <p>Accordion</p>
       <div class="collapse" tabindex="0">
         <div class="collapse-head">
           Click to reveal the content
-          <span class="collapse-icon"
-            ><svg focusable="false" style="fill: #000; width: 20px; height: 20px" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg
-          ></span>
+          <span class="collapse-icon">
+            <i class="fas fa-chevron-down"></i>
+          </span>
         </div>
         <div class="collapse-content">
           <div class="collapse-inner">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti alias quae nulla amet voluptatem, a corporis consequatur facere praesentium maiores tempore excepturi error quasi nobis quidem repellendus consectetur temporibus totam?</div>
@@ -169,31 +169,35 @@
       </div>
 
       <p>Usage with button</p>
-      <div class="collapse" tabindex="0">
+      <div class="collapse inline" tabindex="0">
         <button>Reveal Content</button>
         <div class="collapse-content">
           <div class="collapse-inner">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti alias quae nulla amet voluptatem, a corporis consequatur facere praesentium maiores tempore excepturi error quasi nobis quidem repellendus consectetur temporibus totam?</div>
         </div>
       </div>
 
-      <h1>Drawer</h1>
-      <input type="checkbox" class="drawer-control" id="drawer-control" name="drawer-control" />
-      <label class="btn" for="drawer-control">Open drawer</label>
-      <label for="drawer-control" class="drawer-background"></label>
-      <div class="drawer">
-        <div class="drawer-header">
-          <h3>Drawer Title</h3>
-          <label for="drawer-control" class="cursor-pointer squishy">
-            <i class="fa fa-times" style="font-size: 25px"></i>
-          </label>
-        </div>
-        <div class="drawer-content">
-          <h3>Drawer Content</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti fugit iste temporibus mollitia, dicta veniam qui sint omnis maxime exercitationem maiores impedit libero, eius officia obcaecati harum saepe consequuntur expedita.</p>
+      <h1 class="ml-2 mt-5">Drawer</h1>
+
+      <!-- Important div to separate drawers. Don't remove it -->
+      <div>
+        <input type="checkbox" class="drawer-control" id="drawer-control" name="drawer-control" />
+        <label class="btn" for="drawer-control">Open drawer</label>
+        <label for="drawer-control" class="drawer-background"></label>
+        <div class="drawer">
+          <div class="drawer-header">
+            <h3>Drawer Title</h3>
+            <label for="drawer-control" class="cursor-pointer squishy">
+              <i class="fa fa-times" style="font-size: 25px"></i>
+            </label>
+          </div>
+          <div class="drawer-content">
+            <h3>Drawer Content</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti fugit iste temporibus mollitia, dicta veniam qui sint omnis maxime exercitationem maiores impedit libero, eius officia obcaecati harum saepe consequuntur expedita.</p>
+          </div>
         </div>
       </div>
 
-      <h1>Dropdown</h1>
+      <h1 class="ml-2 mt-5">Dropdown</h1>
 
       <p>Use with button</p>
       <div class="dropdown" tabindex="0">
@@ -216,16 +220,54 @@
       </div>
 
       <p>Align Left</p>
-      <div class="dropdown" tabindex="0">
-        <button class="btn-primary">Dropdown left</button>
-        <div class="dropdown-list dropdown-left">
-          <div>Left Dropdown Item 1</div>
-          <div>Left Dropdown Item 2</div>
-          <div>Left Dropdown Item 3</div>
+      <div class="flex flex-row-reverse">
+        <div class="dropdown" tabindex="0">
+          <button class="btn-primary">Dropdown left</button>
+          <div class="dropdown-list dropdown-left">
+            <div>Left Dropdown Item 1</div>
+            <div>Left Dropdown Item 2</div>
+            <div>Left Dropdown Item 3</div>
+          </div>
         </div>
       </div>
 
-      <h1>List</h1>
+      <h1>Form</h1>
+
+      <div>
+        <h3>Input</h3>
+        <input type="text" class="input-underline" placeholder="Input Value..." />
+        <input type="text" class="input-outline" placeholder="Input Outline..." />
+      </div>
+
+      <div>
+        <h3>Checkbox</h3>
+        <div>
+          <input class="input-checkbox" type="checkbox" id="checkbox-1" />
+          <label for="checkbox-1">Coding</label>
+        </div>
+        <div>
+          <input class="input-checkbox" type="checkbox" id="checkbox-2" />
+          <label for="checkbox-2">Sleeping</label>
+        </div>
+      </div>
+
+      <div>
+        <h3>Radio</h3>
+        <div>
+          <input class="input-radio" type="radio" id="html-radio" name="programming-languages" value="HTML" />
+          <label for="html-radio">HTML</label>
+        </div>
+        <div>
+          <input class="input-radio" type="radio" id="css-radio" name="programming-languages" value="CSS" />
+          <label for="css-radio">CSS</label>
+        </div>
+        <div>
+          <input class="input-radio" type="radio" id="javascript-radio" name="programming-languages" value="JavaScript" />
+          <label for="javascript-radio">JavaScript</label>
+        </div>
+      </div>
+
+      <h1 class="ml-2 mt-5">List</h1>
       <div class="list">
         <div>List Item 1</div>
         <div>List Item 2</div>
@@ -235,26 +277,30 @@
         <div>List Item 6</div>
       </div>
 
-      <h1>Modal</h1>
-      <input type="checkbox" class="modal-control" id="modal-control" name="modal-control" />
-      <label class="btn" for="modal-control">Open modal</label>
-      <label for="modal-control" class="modal-background"></label>
-      <div class="modal">
-        <div class="modal-header">
-          <h3>Modal Title</h3>
-          <label for="modal-control" class="cursor-pointer squishy">
-            <i class="fa fa-times" style="font-size: 25px"></i>
-          </label>
-        </div>
-        <div class="modal-content">
-          <h3>Modal Content</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti fugit iste temporibus mollitia, dicta veniam qui sint omnis maxime exercitationem maiores impedit libero, eius officia obcaecati harum saepe consequuntur expedita.</p>
+      <h1 class="ml-2 mt-5">Modal</h1>
+
+      <!-- Important div to separate modals, don't remove it -->
+      <div>
+        <input type="checkbox" class="modal-control" id="modal-control" name="modal-control" />
+        <label class="btn" for="modal-control">Open modal</label>
+        <label for="modal-control" class="modal-background"></label>
+        <div class="modal">
+          <div class="modal-header">
+            <h3>Modal Title</h3>
+            <label for="modal-control" class="cursor-pointer squishy">
+              <i class="fa fa-times" style="font-size: 25px"></i>
+            </label>
+          </div>
+          <div class="modal-content">
+            <h3>Modal Content</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti fugit iste temporibus mollitia, dicta veniam qui sint omnis maxime exercitationem maiores impedit libero, eius officia obcaecati harum saepe consequuntur expedita.</p>
+          </div>
         </div>
       </div>
 
       <!-- Navbar -->
 
-      <h1>Progress</h1>
+      <h1 class="ml-2 mt-5">Progress</h1>
       <div>
         <svg class="circular-progress" viewBox="25 25 50 50">
           <circle cx="50" cy="50" r="20"></circle>
@@ -265,17 +311,25 @@
         </svg>
       </div>
 
-      <h1>Skeleton</h1>
+      <h1 class="ml-2 mt-5">Skeleton</h1>
       <div>
         <div class="skeleton rounded-full"></div>
         <div style="width: 100%; height: 100px" class="skeleton mt-3"></div>
       </div>
 
-      <h1>Tooltips</h1>
-      <button class="tooltips" data-tooltips="Top">Tooltips Top</button>
-      <button class="tooltips tooltips-bottom" data-tooltips="Bottom">Tooltips Bottom</button>
-      <button class="tooltips tooltips-left" data-tooltips="Left">Tooltips Left</button>
-      <button class="tooltips tooltips-right" data-tooltips="Right">Tooltips Right</button>
+      <h1 class="ml-2 mt-5">Tooltips</h1>
+      <div class="flex flex-row-reverse">
+        <button class="tooltips" data-tooltips="Top">Tooltips Top</button>
+      </div>
+      <div>
+        <button class="tooltips tooltips-bottom" data-tooltips="Bottom">Tooltips Bottom</button>
+      </div>
+      <div class="flex flex-row-reverse">
+        <button class="tooltips tooltips-left" data-tooltips="Left">Tooltips Left</button>
+      </div>
+      <div>
+        <button class="tooltips tooltips-right" data-tooltips="Right">Tooltips Right</button>
+      </div>
 
       <!-- Utility Classes -->
     </div>

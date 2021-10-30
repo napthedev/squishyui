@@ -71,8 +71,8 @@
     }
   }
 
-  .top-#{$key} {
-    top: $value;
+  .gap-#{$key} {
+    gap: $value;
   }
 }
 
@@ -134,11 +134,25 @@
 
 .container {
   padding: 50px 10%;
+  @media (max-width: 768px) {
+    padding: 40px 5%;
+  }
+  @media (min-width: 1400px) {
+    padding: 60px 15%;
+  }
 }
 
 .squishy {
   @include squishy;
   transition: 0.3s;
+}
+.no-squishy {
+  &:hover {
+    transform: scale(1);
+  }
+  &:active {
+    transform: scale(1);
+  }
 }
 
 .cursor-default {
@@ -154,4 +168,17 @@
 
 .rounded-full {
   border-radius: 99999px;
+}
+
+.responsive-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+@each $key, $value in $text-aligns {
+  .#{$key} {
+    text-align: $value;
+  }
 }
