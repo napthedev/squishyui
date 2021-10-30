@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "sass scss/main.scss css/main.css --watch"
+    "dev": "sass scss/main.scss css/main.css --watch",
+    "build": "sass scss/main.scss build/squishy-ui.min.css --style=compressed --no-source-map"
   },
   "keywords": [],
   "author": "napthedev",

@@ -5,7 +5,6 @@
   border-radius: $radius;
   margin: 4px;
   transition: 0.2s;
-  @include squishy(1, 0.99);
   &-primary {
     @include alertStyles($primary);
   }

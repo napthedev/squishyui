@@ -6,17 +6,17 @@
 - Avatar ✅
 - Button ✅
 - Button Group ✅
+- Button Badge ✅
 - Collapse ✅
-- Container ✅ ❌
-- Badge
-- Card
-- Breadcrumb
+- Container ✅
+- Card ✅
+- Breadcrumb ✅
 - Dropdown ✅
-- List
-- Modal
+- List ✅
+- Modal ✅
 - Navbar
 - Skeleton
-- Progress
+- Progress✅
 - Tooltips ✅
 - Drawer
 - Forms
@@ -27,3 +27,13 @@
   - Range
   - Validation
 - Utility classes
+  - Color
+  - Background color
+  - Padding
+  - Margin
+  - Display
+  - Position
+  - Inset
+  - Z Index
+  - Flex
+  - Width, height

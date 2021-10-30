@@ -1,0 +1,9 @@
+.card {
+  box-shadow: 0 0 7px darken($light, 10%);
+  margin: 10px;
+  border-radius: $radius;
+
+  &-content {
+    padding: 13px;
+  }
+}

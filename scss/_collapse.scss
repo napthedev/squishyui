@@ -28,6 +28,9 @@
   }
 
   #{&}-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: 0.3s;
   }
 
@@ -36,7 +39,6 @@
       &-head {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
-        background: lighten($primary, 35%);
       }
       &-content {
         max-height: var(--max-height);

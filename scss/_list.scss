@@ -1,0 +1,15 @@
+.list {
+  margin: 4px;
+  border: 2px solid $light;
+  border-radius: $radius;
+  overflow: hidden;
+
+  & > * {
+    padding: 4px 10px;
+    border-bottom: 2px solid $light;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

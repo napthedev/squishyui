@@ -4,14 +4,14 @@
 
   & > *:first-child {
     cursor: pointer;
+    transition: 0.3s;
+    @include squishy;
   }
 
   #{&}-list {
     position: absolute;
     top: 100%;
     left: 0;
-    visibility: hidden;
-    opacity: 0;
     transform: scale(0);
     cursor: pointer;
     border-radius: $radius;
@@ -22,13 +22,16 @@
     white-space: nowrap;
     width: max-content;
 
+    @include hidden;
+
     & > * {
       padding: 5px 10px;
       transition: 0.2s;
       border-bottom: thin solid $light;
+      @include squishy;
 
       &:hover {
-        background: lighten($primary, 35%);
+        background: $light-blue;
       }
 
       &:last-child {
@@ -45,12 +48,12 @@
 
   &:focus-within {
     .dropdown-list {
-      visibility: visible;
-      opacity: 1;
       transform: scale(1);
       background: lighten($light, 3%);
 
       padding: 10px 0;
+
+      @include show;
     }
   }
 }

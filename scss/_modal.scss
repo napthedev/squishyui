@@ -1,0 +1,55 @@
+.modal {
+  &-control {
+    display: none;
+
+    &:checked {
+      & ~ .modal-background {
+        @include show;
+      }
+      & ~ .modal {
+        @include show;
+        transform: scale(1) translate(-50%, -50%);
+      }
+    }
+  }
+
+  &-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    background: #00000080;
+    transition: 0.3s;
+
+    @include hidden;
+  }
+
+  &-header {
+    padding: 13px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d3d3d3;
+  }
+
+  &-content {
+    padding: 13px 20px;
+  }
+
+  position: fixed;
+  width: 100vw;
+  max-width: 450px;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  z-index: 30;
+  border-radius: $radius;
+  overflow: hidden;
+  transform: scale(0) translate(-50%, -50%);
+  transition: 0.3s;
+  transform-origin: top left;
+
+  @include hidden;
+}

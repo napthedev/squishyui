@@ -1,3 +1,4 @@
+.btn,
 button {
   cursor: pointer;
   outline: none;
@@ -10,6 +11,7 @@ button {
   background: $light;
   border-radius: $radius;
   transition: 0.3s;
+  position: relative;
 
   @include squishy;
   @include buttonStyles;
@@ -82,5 +84,41 @@ button {
 
   &.btn-error {
     @include buttonOutlineStyles(#fff, $error);
+  }
+}
+
+.btn-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  color: $dark;
+  background: $light;
+  border-radius: $radius;
+  padding: 2px 4px;
+  font-size: 13px;
+  line-height: 13px;
+  z-index: 5;
+
+  &.btn-badge {
+    &-primary {
+      @include buttonBadgeStyles(#fff, $primary);
+    }
+
+    &-secondary {
+      @include buttonBadgeStyles(#fff, $secondary);
+    }
+
+    &-warning {
+      @include buttonBadgeStyles($dark, $warning);
+    }
+
+    &-error {
+      @include buttonBadgeStyles(#fff, $error);
+    }
+
+    &-dark {
+      @include buttonBadgeStyles($light, $dark);
+    }
   }
 }

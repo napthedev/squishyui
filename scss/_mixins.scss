@@ -16,6 +16,10 @@
 
   &:hover {
     background: darken($bg, 7%);
+
+    &:disabled {
+      background: $bg;
+    }
   }
 
   &:active {
@@ -36,6 +40,11 @@
   }
 }
 
+@mixin buttonBadgeStyles($text-color: $dark, $bg: $light) {
+  color: $text-color;
+  background: darken($bg, 10%);
+}
+
 @mixin alertStyles($color: $light) {
   background: lighten($color, 40%);
   color: darken($color, 10%);
@@ -46,4 +55,14 @@
   height: $size;
   border-radius: 99999px;
   border: thin solid $light;
+}
+
+@mixin hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@mixin show {
+  opacity: 1;
+  visibility: visible;
 }
