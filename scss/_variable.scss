@@ -6,4 +6,61 @@ $light: #f0f0f0;
 $dark: #111111;
 $light-blue: #d5eafd;
 
+$colors: (
+  primary: $primary,
+  secondary: $secondary,
+  warning: $warning,
+  error: $error,
+  light: $light,
+  dark: $dark,
+  light-blue: $light-blue,
+);
+
+$spacing: 4px;
+$spacings: (
+  0: 0px,
+  1: $spacing,
+  2: $spacing * 2,
+  3: $spacing * 4,
+  4: $spacing * 6,
+  5: $spacing * 12,
+);
+
+$displays: (block, inline-block, inline, flex, inline-flex, table, inline-table, grid, inline-grid, none);
+$positions: (static, fixed, absolute, relative, sticky);
+
+$flex-directions: (
+  flex-row: row,
+  flex-row-reverse: row-reverse,
+  flex-col: column,
+  flex-col-reverse: column-reverse,
+);
+
+$justify-contents: (
+  justify-start: flex-start,
+  justify-end: flex-end,
+  justify-center: center,
+  justify-between: space-between,
+  justify-around: space-around,
+  justify-evenly: space-evenly,
+);
+
+$align-items: (
+  items-start: flex-start,
+  items-end: flex-end,
+  items-center: center,
+  items-baseline: baseline,
+  items-stretch: stretch,
+);
+
+$flex-wrap: (wrap, wrap-reverse, nowrap);
+
+$sizing: (
+  0: 0px,
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%,
+);
+
 $radius: 5px;

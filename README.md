@@ -1,24 +1,24 @@
-# Squishy UI
+<p align="center">
+<img src="https://i.imgur.com/ffkMKUe.png" alt="Squishy UI" />
+</p>
 
-### TODO
+<p align="center">
+A CSS Only Framework for your application
+</p>
+
+### Feature
 
 - Alert ✅
 - Avatar ✅
+- Breadcrumb ✅
 - Button ✅
-- Button Group ✅
 - Button Badge ✅
+- Button Group ✅
+- Card ✅
 - Collapse ✅
 - Container ✅
-- Card ✅
-- Breadcrumb ✅
-- Dropdown ✅
-- List ✅
-- Modal ✅
-- Navbar
-- Skeleton
-- Progress✅
-- Tooltips ✅
 - Drawer
+- Dropdown ✅
 - Forms
   - Input
   - Checkbox
@@ -26,14 +26,23 @@
   - Select
   - Range
   - Validation
-- Utility classes
-  - Color
-  - Background color
-  - Padding
-  - Margin
-  - Display
-  - Position
-  - Inset
-  - Z Index
-  - Flex
-  - Width, height
+- List ✅
+- Modal ✅
+- Navbar
+- Progress
+- Skeleton ✅
+- Tooltips ✅
+
+- Utility classes ✅
+  - Color ✅
+  - Background color ✅
+  - Padding ✅
+  - Margin ✅
+  - Display ✅
+  - Position ✅
+  - Flex ✅
+    - Direction ✅
+    - Justify Content ✅
+    - Align Items ✅
+    - Wrap ✅
+  - Width, height ✅

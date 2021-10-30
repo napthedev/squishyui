@@ -1,0 +1,133 @@
+@each $key, $value in $colors {
+  .text {
+    &-#{$key} {
+      color: $value;
+    }
+  }
+
+  .bg {
+    &-#{$key} {
+      background: $value;
+    }
+  }
+}
+
+@each $key, $value in $spacings {
+  .m {
+    &-#{$key} {
+      margin: $value;
+    }
+
+    &x-#{$key} {
+      margin-left: $value;
+      margin-right: $value;
+    }
+
+    &y-#{$key} {
+      margin-top: $value;
+      margin-bottom: $value;
+    }
+
+    &t-#{$key} {
+      margin-top: $value;
+    }
+    &r-#{$key} {
+      margin-right: $value;
+    }
+    &b-#{$key} {
+      margin-bottom: $value;
+    }
+    &l-#{$key} {
+      margin-left: $value;
+    }
+  }
+
+  .p {
+    &-#{$key} {
+      padding: $value;
+    }
+
+    &x-#{$key} {
+      padding-left: $value;
+      padding-right: $value;
+    }
+
+    &y-#{$key} {
+      padding-top: $value;
+      padding-bottom: $value;
+    }
+
+    &t-#{$key} {
+      padding-top: $value;
+    }
+    &r-#{$key} {
+      padding-right: $value;
+    }
+    &b-#{$key} {
+      padding-bottom: $value;
+    }
+    &l-#{$key} {
+      padding-left: $value;
+    }
+  }
+
+  .top-#{$key} {
+    top: $value;
+  }
+}
+
+@each $item in $displays {
+  .#{$item} {
+    display: $item;
+  }
+}
+
+@each $item in $positions {
+  .#{$item} {
+    position: $item;
+  }
+}
+
+@each $key, $value in $flex-directions {
+  .#{$key} {
+    flex-direction: $value;
+  }
+}
+
+@each $key, $value in $justify-contents {
+  .#{$key} {
+    justify-content: $value;
+  }
+}
+
+@each $key, $value in $align-items {
+  .#{$key} {
+    align-items: $value;
+  }
+}
+
+@each $item in $flex-wrap {
+  .#{$item} {
+    flex-wrap: $item;
+  }
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+@each $item, $value in $sizing {
+  .h-#{$item} {
+    height: $value;
+  }
+  .w-#{$item} {
+    width: $value;
+  }
+}
+
+.h-screen {
+  height: 100vh;
+}
+.w-screen {
+  height: 100vw;
+}
