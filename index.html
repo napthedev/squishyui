@@ -10,8 +10,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/atom-one-dark.min.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <style>
+      pre {
+        position: relative;
+      }
+
       pre > code {
         font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      }
+
+      pre:hover button {
+        opacity: 1;
+      }
+
+      pre > button {
+        position: absolute;
+        top: 18px;
+        right: 5px;
+        width: 35px;
+        height: 35px;
+        opacity: 0;
       }
 
       h4 {
@@ -34,7 +51,8 @@
 
       <h1 class="ml-2 mt-4">Installation</h1>
       <pre>
-        <code class="language-html">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/napthedev/squishyui/css/main.min.css"&gt;</code>
+        <code id="installation-code" class="language-html">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/napthedev/squishyui/css/main.min.css"&gt;</code>
+        <button class="no-squishy"  data-clipboard-target="#installation-code"><i class="far fa-clipboard"></i></button>
       </pre>
 
       <h1 class="ml-2">Alert</h1>
@@ -1199,9 +1217,11 @@
         </tr>
       </table>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
     <script>
       hljs.highlightAll();
+      new ClipboardJS("[data-clipboard-target]");
     </script>
   </body>
 </html>
