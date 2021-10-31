@@ -34,6 +34,7 @@ input[type="text"] {
     position: relative;
     padding-left: 28px;
     cursor: pointer;
+    line-height: 24px;
 
     &::before {
       content: "";
@@ -83,6 +84,7 @@ input[type="text"] {
     position: relative;
     padding-left: 28px;
     cursor: pointer;
+    line-height: 24px;
 
     &::before {
       content: "";
