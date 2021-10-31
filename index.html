@@ -319,7 +319,7 @@
     Click to reveal the content
     &lt;span class="collapse-icon"&gt;
     &lt;!-- Your Icon Goes Here --&gt;
-    &lt;!-- For example: &lt;i&gt; class="fas fa-chevron-down"&gt;&lt;/i&gt; --&gt;
+    &lt;!-- For example: &lt;i class="fas fa-chevron-down"&gt;&lt;/i&gt; --&gt;
     &lt;/span&gt;
   &lt;/div&gt;
   &lt;div class="collapse-content"&gt;
@@ -347,15 +347,14 @@
 
       <h1 class="ml-2">Drawer</h1>
 
-      <!-- Important div to separate drawers. Don't remove it -->
       <div>
-        <input type="checkbox" class="drawer-control" id="drawer-control" name="drawer-control" />
-        <label class="btn" for="drawer-control">Open drawer</label>
-        <label for="drawer-control" class="drawer-background"></label>
+        <input type="checkbox" class="drawer-control" id="drawer-left-control" name="drawer-left-control" />
+        <label class="btn" for="drawer-left-control">Open drawer</label>
+        <label for="drawer-left-control" class="drawer-background"></label>
         <div class="drawer">
           <div class="drawer-header">
             <h3>Drawer Title</h3>
-            <label for="drawer-control" class="cursor-pointer squishy">
+            <label for="drawer-left-control" class="cursor-pointer squishy">
               <i class="fa fa-times" style="font-size: 25px"></i>
             </label>
           </div>
@@ -365,7 +364,6 @@
           </div>
         </div>
       </div>
-
       <pre>
         <code class="language-html">&lt;!-- Important div to separate drawers. Don't remove it --&gt;
 &lt;div&gt;
@@ -376,7 +374,49 @@
     &lt;div class="drawer-header"&gt;
       &lt;h3&gt;Drawer Title&lt;/h3&gt;
       &lt;label for="drawer-control" class="cursor-pointer squishy"&gt;
-        &lt;i&gt; class="fa fa-times" style="font-size: 25px"&gt;&lt;/i&gt;
+      &lt;!-- Icon goes here --&gt;
+      &lt;!-- For example: &lt;i&gt; class="fa fa-times" style="font-size: 25px"&gt;&lt;/i&gt; --&gt;
+      &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="drawer-content"&gt;
+      &lt;h3&gt;Drawer Content&lt;/h3&gt;
+      &lt;p&gt;Lorem ipsum, dolor sit amet&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+      </pre>
+
+      <p>Drawer on the right</p>
+
+      <div>
+        <input type="checkbox" class="drawer-control" id="drawer-right-control" name="drawer-right-control" />
+        <label class="btn" for="drawer-right-control">Open drawer</label>
+        <label for="drawer-right-control" class="drawer-background"></label>
+        <div class="drawer drawer-right">
+          <div class="drawer-header">
+            <h3>Drawer Title</h3>
+            <label for="drawer-right-control" class="cursor-pointer squishy">
+              <i class="fa fa-times" style="font-size: 25px"></i>
+            </label>
+          </div>
+          <div class="drawer-content">
+            <h3>Drawer Content</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti fugit iste temporibus mollitia, dicta veniam qui sint omnis maxime exercitationem maiores impedit libero, eius officia obcaecati harum saepe consequuntur expedita.</p>
+          </div>
+        </div>
+      </div>
+      <pre>
+        <code class="language-html">&lt;!-- Important div to separate drawers. Don't remove it --&gt;
+&lt;div&gt;
+  &lt;input type="checkbox" class="drawer-control" id="drawer-control" name="drawer-control" /&gt;
+  &lt;label class="btn" for="drawer-control"&gt;Open drawer&lt;/label&gt;
+  &lt;label for="drawer-control" class="drawer-background"&gt;&lt;/label&gt;
+  &lt;div class="drawer drawer-right"&gt;
+    &lt;div class="drawer-header"&gt;
+      &lt;h3&gt;Drawer Title&lt;/h3&gt;
+      &lt;label for="drawer-control" class="cursor-pointer squishy"&gt;
+      &lt;!-- Icon goes here --&gt;
+      &lt;!-- For example: &lt;i&gt; class="fa fa-times" style="font-size: 25px"&gt;&lt;/i&gt; --&gt;
       &lt;/label&gt;
     &lt;/div&gt;
     &lt;div class="drawer-content"&gt;
@@ -550,9 +590,7 @@
 
       <h1 class="ml-2">Modal</h1>
 
-      <!-- Important div to separate modals, don't remove it -->
       <div>
-        <!-- Checkbox to control the modal, keep the className, change the id to separate modals -->
         <input type="checkbox" class="modal-control" id="modal-control" name="modal-control" />
         <label class="btn" for="modal-control">Open modal</label>
         <label for="modal-control" class="modal-background"></label>
@@ -600,7 +638,6 @@
           <circle cx="50" cy="50" r="20"></circle>
         </svg>
 
-        <!-- Customize the color -->
         <svg class="circular-progress" viewBox="25 25 50 50">
           <circle style="stroke: red" cx="50" cy="50" r="20"></circle>
         </svg>
@@ -648,8 +685,6 @@
 &lt;button class="tooltips tooltips-left" data-tooltips="Left"&gt;Tooltips Left&lt;/button&gt;
 &lt;button class="tooltips tooltips-right" data-tooltips="Right"&gt;Tooltips Right&lt;/button&gt;</code>
       </pre>
-
-      <!-- Utility Classes -->
 
       <h1>Utility Classes</h1>
 

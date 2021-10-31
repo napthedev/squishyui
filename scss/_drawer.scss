@@ -50,4 +50,14 @@
   transform: translateX(-100%);
 
   @include hidden;
+
+  &-right {
+    left: auto;
+    right: 0;
+    transform: translateX(100%);
+
+    .drawer-header {
+      flex-direction: row-reverse;
+    }
+  }
 }

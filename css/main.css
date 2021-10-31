@@ -472,6 +472,14 @@ button:disabled:hover {
 .drawer-content {
   padding: 13px 20px;
 }
+.drawer-right {
+  left: auto;
+  right: 0;
+  transform: translateX(100%);
+}
+.drawer-right .drawer-header {
+  flex-direction: row-reverse;
+}
 
 .dropdown {
   position: relative;
