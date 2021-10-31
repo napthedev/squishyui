@@ -4,6 +4,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  &[tabindex="0"] {
+    outline: none;
+  }
 }
 
 body {
@@ -29,4 +33,16 @@ h4,
 h5,
 h6 {
   font-weight: 600;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
 }

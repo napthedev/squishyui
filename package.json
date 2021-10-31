@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "sass scss/main.scss dist/main.css --watch",
+    "dev": "sass scss/main.scss css/main.css --watch --no-source-map",
     "build": "sass scss/main.scss dist/css/main.css --style=compressed --no-source-map && cpx index.html dist"
   },
   "keywords": [],

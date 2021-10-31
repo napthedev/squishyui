@@ -6,7 +6,14 @@
 A CSS Only Framework for your application
 </p>
 
-### Feature
+<p align="center">
+<a href="https://squishy-ui.netlify.app/" target="_blank">Official Documentation</a>
+</p>
+
+<details>
+<summary>
+Features
+</summary>
 
 - Alert ✅
 - Avatar ✅
@@ -30,7 +37,7 @@ A CSS Only Framework for your application
 - Tooltips ✅
 
 - Utility classes ✅
-  - Squishy
+  - Squishy ✅
   - Color ✅
   - Background color ✅
   - Padding ✅
@@ -49,3 +56,5 @@ A CSS Only Framework for your application
   - Border Radius ✅
   - Responsive Image ✅
   - Text Align ✅
+
+</details>

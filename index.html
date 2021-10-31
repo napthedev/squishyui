@@ -13,9 +13,19 @@
       pre > code {
         font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       }
+
+      h4 {
+        margin-top: 24px;
+        margin-bottom: 8px;
+      }
     </style>
   </head>
   <body>
+    <div class="flex flex-row-reverse">
+      <p class="mt-5 mr-5">
+        Give me a star: <span class="cursor-pointer" onclick="window.open('https://github.com/napthedev/squishyui')"><i class="fab fa-github"></i> Github</span>
+      </p>
+    </div>
     <div class="container">
       <div class="flex flex-col items-center">
         <img class="responsive-image" src="https://i.imgur.com/ffkMKUe.png" alt="" />
@@ -24,7 +34,7 @@
 
       <h1 class="ml-2 mt-4">Installation</h1>
       <pre>
-        <code class="language-html">&lt;link rel="stylesheet" href="https://github.com/napthedev/Squishy-UI"&gt;</code>
+        <code class="language-html">&lt;link rel="stylesheet" href="https://github.com/napthedev/squishyui"&gt;</code>
       </pre>
 
       <h1 class="ml-2">Alert</h1>
@@ -101,8 +111,7 @@
   &lt;div class="breadcrumb-item"&gt;
     &lt;a&gt; href="#"&gt;Images&lt;/a&gt;
   &lt;/div&gt;
-&lt;/div&gt;
-        </code>
+&lt;/div&gt;</code>
       </pre>
 
       <h1 class="ml-2">Buttons</h1>
@@ -158,12 +167,12 @@
 
       <pre>
         <code class="language-html">&lt;div class="btn-group"&gt;
-&lt;button&gt;Normal&lt;/button&gt;
-&lt;button class="btn-primary"&gt;Primary&lt;/button&gt;
-&lt;button class="btn-secondary"&gt;Secondary&lt;/button&gt;
-&lt;button class="btn-warning"&gt;Warning&lt;/button&gt;
-&lt;button class="btn-error"&gt;Error&lt;/button&gt;
-&lt;button class="btn-dark"&gt;Dark&lt;/button&gt;
+  &lt;button&gt;Normal&lt;/button&gt;
+  &lt;button class="btn-primary"&gt;Primary&lt;/button&gt;
+  &lt;button class="btn-secondary"&gt;Secondary&lt;/button&gt;
+  &lt;button class="btn-warning"&gt;Warning&lt;/button&gt;
+  &lt;button class="btn-error"&gt;Error&lt;/button&gt;
+  &lt;button class="btn-dark"&gt;Dark&lt;/button&gt;
 &lt;div&gt;</code>
       </pre>
 
@@ -179,12 +188,12 @@
 
       <pre>
         <code class="language-html">&lt;div class="btn-group"&gt;
-&lt;button class="btn-outline"&gt;Normal&lt;/button&gt;
-&lt;button class="btn-outline btn-primary"&gt;Primary&lt;/button&gt;
-&lt;button class="btn-outline btn-secondary"&gt;Secondary&lt;/button&gt;
-&lt;button class="btn-outline btn-warning"&gt;Warning&lt;/button&gt;
-&lt;button class="btn-outline btn-error"&gt;Error&lt;/button&gt;
-&lt;button class="btn-outline btn-dark"&gt;Dark&lt;/button&gt;
+  &lt;button class="btn-outline"&gt;Normal&lt;/button&gt;
+  &lt;button class="btn-outline btn-primary"&gt;Primary&lt;/button&gt;
+  &lt;button class="btn-outline btn-secondary"&gt;Secondary&lt;/button&gt;
+  &lt;button class="btn-outline btn-warning"&gt;Warning&lt;/button&gt;
+  &lt;button class="btn-outline btn-error"&gt;Error&lt;/button&gt;
+  &lt;button class="btn-outline btn-dark"&gt;Dark&lt;/button&gt;
 &lt;div&gt;</code>
       </pre>
 
@@ -278,12 +287,12 @@
       </pre>
 
       <h1 class="ml-2">Card</h1>
-      <div class="card" style="width: 400px">
+      <div class="card" style="width: 100%; max-width: 400px">
         <div class="card-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed eveniet vel, aut hic nam, reprehenderit officiis enim id, accusantium iusto quis architecto tempora iste cupiditate impedit cumque ex officia. Nisi?</div>
       </div>
 
       <pre>
-        <code class="language-html">&lt;div class="card" style="width: 400px"&gt;
+        <code class="language-html">&lt;div class="card" style="width: 100%; max-width: 400px"&gt;
   &lt;div class="card-content">Lorem ipsum dolor sit amet&lt;/div&gt;
 &lt;/div&gt;</code>
       </pre>
@@ -304,11 +313,13 @@
       </div>
 
       <pre>
-        <code class="language-html">&lt;div class="collapse" tabindex="0"&gt;
+        <code class="language-html">&lt;!-- Remember to add tabindex 0 so that the element is focusable --&gt;
+&lt;div class="collapse" tabindex="0"&gt;
   &lt;div class="collapse-head"&gt;
     Click to reveal the content
     &lt;span class="collapse-icon"&gt;
-      &lt;i&gt; class="fas fa-chevron-down"&gt;&lt;/i&gt;
+    &lt;!-- Your Icon Goes Here --&gt;
+    &lt;!-- For example: &lt;i&gt; class="fas fa-chevron-down"&gt;&lt;/i&gt; --&gt;
     &lt;/span&gt;
   &lt;/div&gt;
   &lt;div class="collapse-content"&gt;
@@ -334,7 +345,7 @@
 &lt;/div&gt;</code>
       </pre>
 
-      <h1 class="ml-2 mt-5">Drawer</h1>
+      <h1 class="ml-2">Drawer</h1>
 
       <!-- Important div to separate drawers. Don't remove it -->
       <div>
@@ -359,8 +370,8 @@
         <code class="language-html">&lt;!-- Important div to separate drawers. Don't remove it --&gt;
 &lt;div&gt;
   &lt;input type="checkbox" class="drawer-control" id="drawer-control" name="drawer-control" /&gt;
-  &lt;label&gt; class="btn" for="drawer-control"&gt;Open drawer&lt;/label&gt;
-  &lt;label&gt; for="drawer-control" class="drawer-background"&gt;&lt;/label&gt;
+  &lt;label class="btn" for="drawer-control"&gt;Open drawer&lt;/label&gt;
+  &lt;label for="drawer-control" class="drawer-background"&gt;&lt;/label&gt;
   &lt;div class="drawer"&gt;
     &lt;div class="drawer-header"&gt;
       &lt;h3&gt;Drawer Title&lt;/h3&gt;
@@ -376,17 +387,31 @@
 &lt;/div&gt;</code>
       </pre>
 
-      <h1 class="ml-2 mt-5">Dropdown</h1>
+      <h1 class="ml-2">Dropdown</h1>
 
       <p>Use with button</p>
-      <div class="dropdown" tabindex="0">
-        <button class="btn-primary">Open dropdown</button>
-        <div class="dropdown-list">
-          <div>Dropdown Item 1</div>
-          <div>Dropdown Item 2</div>
-          <div>Dropdown Item 3</div>
+      <div class="flex">
+        <div class="dropdown" tabindex="0">
+          <button class="btn-primary">Open dropdown</button>
+          <div class="dropdown-list">
+            <div>Dropdown Item 1</div>
+            <div>Dropdown Item 2</div>
+            <div>Dropdown Item 3</div>
+          </div>
         </div>
       </div>
+
+      <pre>
+        <code class="language-html">&lt;!-- Tabindex 0 is important --&gt;
+&lt;div class="dropdown" tabindex="0"&gt;
+  &lt;button class="btn-primary"&gt;Open dropdown&lt;/button&gt;
+  &lt;div class="dropdown-list"&gt;
+    &lt;div&gt;Dropdown Item 1&lt;/div&gt;
+    &lt;div&gt;Dropdown Item 2&lt;/div&gt;
+    &lt;div&gt;Dropdown Item 3&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+      </pre>
 
       <p>Use with avatar</p>
       <div class="dropdown" tabindex="0">
@@ -397,6 +422,17 @@
           <div>Sign Out</div>
         </div>
       </div>
+
+      <pre>
+        <code class="language-html">&lt;div class="dropdown" tabindex="0"&gt;
+  &lt;img class="avatar" src="Your Avatar Src" alt="" /&gt;
+  &lt;div class="dropdown-list"&gt;
+    &lt;div&gt;View your profile&lt;/div&gt;
+    &lt;div&gt;Back to Home&lt;/div&gt;
+    &lt;div&gt;Sign Out&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+      </pre>
 
       <p>Align Left</p>
       <div class="flex flex-row-reverse">
@@ -410,6 +446,17 @@
         </div>
       </div>
 
+      <pre>
+        <code class="language-html">&lt;div class="dropdown" tabindex="0"&gt;
+  &lt;button class="btn-primary"&gt;Open dropdown&lt;/button&gt;
+  &lt;div class="dropdown-list dropdown-left"&gt;
+    &lt;div&gt;Dropdown Item 1&lt;/div&gt;
+    &lt;div&gt;Dropdown Item 2&lt;/div&gt;
+    &lt;div&gt;Dropdown Item 3&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+      </pre>
+
       <h1>Form</h1>
 
       <div>
@@ -417,6 +464,11 @@
         <input type="text" class="input-underline" placeholder="Input Value..." />
         <input type="text" class="input-outline" placeholder="Input Outline..." />
       </div>
+
+      <pre>
+        <code class="language-html">&lt;input type="text" class="input-underline" placeholder="Input Value..." /&gt;
+&lt;input type="text" class="input-outline" placeholder="Input Outline..." /&gt;</code>
+      </pre>
 
       <div>
         <h3>Checkbox</h3>
@@ -429,6 +481,20 @@
           <label for="checkbox-2">Sleeping</label>
         </div>
       </div>
+
+      <pre>
+        <code class="language-html">&lt;div&gt;
+  &lt;h3&gt;Checkbox&lt;/h3&gt;
+  &lt;div&gt;
+    &lt;input class="input-checkbox" type="checkbox" id="checkbox-1" /&gt;
+    &lt;label&gt; for="checkbox-1"&gt;Coding&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;input class="input-checkbox" type="checkbox" id="checkbox-2" /&gt;
+    &lt;label&gt; for="checkbox-2"&gt;Sleeping&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+      </pre>
 
       <div>
         <h3>Radio</h3>
@@ -446,7 +512,22 @@
         </div>
       </div>
 
-      <h1 class="ml-2 mt-5">List</h1>
+      <pre>
+        <code class="language-html">&lt;div&gt;
+  &lt;input class="input-radio" type="radio" id="html-radio" name="programming-languages" value="HTML" /&gt;
+  &lt;label for="html-radio"&gt;HTML&lt;/label&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;input class="input-radio" type="radio" id="css-radio" name="programming-languages" value="CSS" /&gt;
+  &lt;label for="css-radio"&gt;CSS&lt;/label&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;input class="input-radio" type="radio" id="javascript-radio" name="programming-languages" value="JavaScript" /&gt;
+  &lt;label for="javascript-radio"&gt;JavaScript&lt;/label&gt;
+&lt;/div&gt;</code>
+</pre>
+
+      <h1 class="ml-2">List</h1>
       <div class="list">
         <div>List Item 1</div>
         <div>List Item 2</div>
@@ -456,10 +537,22 @@
         <div>List Item 6</div>
       </div>
 
-      <h1 class="ml-2 mt-5">Modal</h1>
+      <pre>
+        <code class="language-html">&lt;div class="list"&gt;
+  &lt;div&gt;List Item 1&lt;/div&gt;
+  &lt;div&gt;List Item 2&lt;/div&gt;
+  &lt;div&gt;List Item 3&lt;/div&gt;
+  &lt;div&gt;List Item 4&lt;/div&gt;
+  &lt;div&gt;List Item 5&lt;/div&gt;
+  &lt;div&gt;List Item 6&lt;/div&gt;
+&lt;/div&gt;</code>
+      </pre>
+
+      <h1 class="ml-2">Modal</h1>
 
       <!-- Important div to separate modals, don't remove it -->
       <div>
+        <!-- Checkbox to control the modal, keep the className, change the id to separate modals -->
         <input type="checkbox" class="modal-control" id="modal-control" name="modal-control" />
         <label class="btn" for="modal-control">Open modal</label>
         <label for="modal-control" class="modal-background"></label>
@@ -477,26 +570,65 @@
         </div>
       </div>
 
+      <pre>
+        <code class="language-html">&lt;!-- Important div to separate modals, don't remove it --&gt;
+&lt;div&gt;
+  &lt;!-- Checkbox to control the modal, keep the className, change the id to separate modals --&gt;
+  &lt;input type="checkbox" class="modal-control" id="modal-control" name="modal-control" /&gt;
+  &lt;label class="btn" for="modal-control"&gt;Open modal&lt;/label&gt;
+  &lt;label for="modal-control" class="modal-background"&gt;&lt;/label&gt;
+  &lt;div class="modal"&gt;
+    &lt;div class="modal-header"&gt;
+      &lt;h3&gt;Modal Title&lt;/h3&gt;
+      &lt;label for="modal-control" class="cursor-pointer squishy"&gt;
+        &lt;i class="fa fa-times" style="font-size: 25px"&gt;&lt;/i&gt;
+      &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;h3&gt;Modal Content&lt;/h3&gt;
+      &lt;p&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti fugit iste temporibus mollitia, dicta veniam qui sint omnis maxime exercitationem maiores impedit libero, eius officia obcaecati harum saepe consequuntur expedita.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+      </pre>
+
       <!-- Navbar -->
 
-      <h1 class="ml-2 mt-5">Progress</h1>
+      <h1 class="ml-2">Progress</h1>
       <div>
         <svg class="circular-progress" viewBox="25 25 50 50">
           <circle cx="50" cy="50" r="20"></circle>
         </svg>
 
-        <svg style="--color: red" class="circular-progress" viewBox="25 25 50 50">
-          <circle cx="50" cy="50" r="20"></circle>
+        <!-- Customize the color -->
+        <svg class="circular-progress" viewBox="25 25 50 50">
+          <circle style="stroke: red" cx="50" cy="50" r="20"></circle>
         </svg>
       </div>
 
-      <h1 class="ml-2 mt-5">Skeleton</h1>
+      <pre>
+        <code class="language-html">&lt;svg class="circular-progress" viewBox="25 25 50 50"&gt;
+  &lt;circle&gt; cx="50" cy="50" r="20"&gt;&lt;/circle&gt;
+&lt;/svg&gt;
+
+&lt;!-- Customize the color --&gt;
+&lt;svg class="circular-progress" viewBox="25 25 50 50"&gt;
+  &lt;circle&gt; style="stroke: red" cx="50" cy="50" r="20"&gt;&lt;/circle&gt;
+&lt;/svg&gt;</code>
+      </pre>
+
+      <h1 class="ml-2">Skeleton</h1>
       <div>
         <div class="skeleton rounded-full"></div>
-        <div style="width: 100%; height: 100px" class="skeleton mt-3"></div>
+        <div class="skeleton mt-3 w-full"></div>
       </div>
 
-      <h1 class="ml-2 mt-5">Tooltips</h1>
+      <pre>
+        <code class="language-html">&lt;div class="skeleton rounded-full"&gt;&lt;/div&gt;
+&lt;div class="skeleton mt-3 w-full"&gt;&lt;/div<&gt;</code>
+      </pre>
+
+      <h1 class="ml-2">Tooltips</h1>
       <div class="flex flex-row-reverse">
         <button class="tooltips" data-tooltips="Top">Tooltips Top</button>
       </div>
@@ -510,9 +642,528 @@
         <button class="tooltips tooltips-right" data-tooltips="Right">Tooltips Right</button>
       </div>
 
-      <!-- Utility Classes -->
-    </div>
+      <pre>
+        <code>&lt;button class="tooltips" data-tooltips="Top"&gt;Tooltips Top&lt;/button&gt;
+&lt;button class="tooltips tooltips-bottom" data-tooltips="Bottom"&gt;Tooltips Bottom&lt;/button&gt;
+&lt;button class="tooltips tooltips-left" data-tooltips="Left"&gt;Tooltips Left&lt;/button&gt;
+&lt;button class="tooltips tooltips-right" data-tooltips="Right"&gt;Tooltips Right&lt;/button&gt;</code>
+      </pre>
 
+      <!-- Utility Classes -->
+
+      <h1>Utility Classes</h1>
+
+      <h4>Squishy</h4>
+      <table>
+        <tr>
+          <th>Class</th>
+          <th>Usage</th>
+        </tr>
+        <tr>
+          <td>squishy</td>
+          <td>Add hover and active scaling effect (Added by default to buttons)</td>
+        </tr>
+        <tr>
+          <td>no-squishy</td>
+          <td>Remove all effect above</td>
+        </tr>
+      </table>
+
+      <h4>Colors</h4>
+      <table>
+        <tr>
+          <th>Color Name</th>
+          <th>Hex Value</th>
+        </tr>
+        <tr>
+          <td>primary</td>
+          <td>#1e90ff</td>
+        </tr>
+        <tr>
+          <td>secondary</td>
+          <td>#11c930</td>
+        </tr>
+        <tr>
+          <td>warning</td>
+          <td>#ffdd12</td>
+        </tr>
+        <tr>
+          <td>error</td>
+          <td>#ff5000</td>
+        </tr>
+        <tr>
+          <td>light</td>
+          <td>#f0f0f0</td>
+        </tr>
+        <tr>
+          <td>dark</td>
+          <td>#111111</td>
+        </tr>
+        <tr>
+          <td>light-blue</td>
+          <td>#d5eafd</td>
+        </tr>
+        <tr>
+          <th>Class Name</th>
+          <th>Usage</th>
+        </tr>
+        <tr>
+          <td>text-*</td>
+          <td>Change text color</td>
+        </tr>
+        <tr>
+          <td>bg-*</td>
+          <td>Change background color</td>
+        </tr>
+      </table>
+
+      <h4>Spacing</h4>
+
+      <table>
+        <tr>
+          <th>Label</th>
+          <th>Pixel Value</th>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>0px</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>4px</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>8px</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>16px</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>24px</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>48px</td>
+        </tr>
+        <tr>
+          <th>Class Name</th>
+          <th>Usage</th>
+        </tr>
+        <tr>
+          <td>m-*</td>
+          <td>Margin on all side</td>
+        </tr>
+        <tr>
+          <td>mx-*</td>
+          <td>Margin on horizontal axis</td>
+        </tr>
+        <tr>
+          <td>my-*</td>
+          <td>Margin on vertical axis</td>
+        </tr>
+        <tr>
+          <td>mt-*</td>
+          <td>Margin top</td>
+        </tr>
+        <tr>
+          <td>mr-*</td>
+          <td>Margin right</td>
+        </tr>
+        <tr>
+          <td>mb-*</td>
+          <td>Margin bottom</td>
+        </tr>
+        <tr>
+          <td>ml-*</td>
+          <td>Margin left</td>
+        </tr>
+        <tr>
+          <td>p-*</td>
+          <td>Padding on all side</td>
+        </tr>
+        <tr>
+          <td>px-*</td>
+          <td>Padding on horizontal axis</td>
+        </tr>
+        <tr>
+          <td>py-*</td>
+          <td>Padding on vertical axis</td>
+        </tr>
+        <tr>
+          <td>pt-*</td>
+          <td>Padding top</td>
+        </tr>
+        <tr>
+          <td>pr-*</td>
+          <td>Padding right</td>
+        </tr>
+        <tr>
+          <td>pb-*</td>
+          <td>Padding bottom</td>
+        </tr>
+        <tr>
+          <td>pl-*</td>
+          <td>Padding left</td>
+        </tr>
+
+        <tr>
+          <td>gap-*</td>
+          <td>Gap between elements</td>
+        </tr>
+      </table>
+
+      <h4>Display</h4>
+
+      <table>
+        <tr>
+          <th>Class</th>
+          <th>Usage</th>
+        </tr>
+        <tr>
+          <td>block</td>
+          <td>Display block</td>
+        </tr>
+        <tr>
+          <td>inline-block</td>
+          <td>Display Inline Block</td>
+        </tr>
+        <tr>
+          <td>inline</td>
+          <td>Display Inline</td>
+        </tr>
+        <tr>
+          <td>flex</td>
+          <td>Display Flex</td>
+        </tr>
+        <tr>
+          <td>inline-flex</td>
+          <td>Display Inline Flex</td>
+        </tr>
+        <tr>
+          <td>table</td>
+          <td>Display Table</td>
+        </tr>
+        <tr>
+          <td>inline-table</td>
+          <td>Display Inline Table</td>
+        </tr>
+        <tr>
+          <td>grid</td>
+          <td>Display Grid</td>
+        </tr>
+        <tr>
+          <td>inline-grid</td>
+          <td>Display Inline Grid</td>
+        </tr>
+        <tr>
+          <td>none</td>
+          <td>Display None</td>
+        </tr>
+      </table>
+
+      <h4>Position</h4>
+
+      <table>
+        <tr>
+          <th>Class</th>
+          <th>Usage</th>
+        </tr>
+        <tr>
+          <td>static</td>
+          <td>Position Static</td>
+        </tr>
+        <tr>
+          <td>fixed</td>
+          <td>Position Fixed</td>
+        </tr>
+        <tr>
+          <td>absolute</td>
+          <td>Position absolute</td>
+        </tr>
+        <tr>
+          <td>relative</td>
+          <td>Position relative</td>
+        </tr>
+        <tr>
+          <td>sticky</td>
+          <td>Position Sticky</td>
+        </tr>
+      </table>
+
+      <h4>Flex</h4>
+
+      <table>
+        <tr>
+          <th>Class</th>
+          <th>Usage</th>
+        </tr>
+
+        <tr>
+          <td>flex-1</td>
+          <td>flex: 1 1 0%</td>
+        </tr>
+
+        <tr>
+          <th>Class</th>
+          <th>Flex Direction</th>
+        </tr>
+
+        <tr>
+          <td>flex-row</td>
+          <td>row</td>
+        </tr>
+
+        <tr>
+          <td>flex-row-reverse</td>
+          <td>row-reverse</td>
+        </tr>
+
+        <tr>
+          <td>flex-col</td>
+          <td>column</td>
+        </tr>
+
+        <tr>
+          <td>flex-col-reverse</td>
+          <td>column-reverse</td>
+        </tr>
+
+        <tr>
+          <th>Class</th>
+          <th>Justify Content</th>
+        </tr>
+
+        <tr>
+          <td>justify-start</td>
+          <td>flex-start</td>
+        </tr>
+
+        <tr>
+          <td>justify-end</td>
+          <td>flex-end</td>
+        </tr>
+
+        <tr>
+          <td>justify-center</td>
+          <td>center</td>
+        </tr>
+
+        <tr>
+          <td>justify-between</td>
+          <td>space-between</td>
+        </tr>
+
+        <tr>
+          <td>justify-around</td>
+          <td>space-around</td>
+        </tr>
+
+        <tr>
+          <td>justify-evenly</td>
+          <td>space-evenly</td>
+        </tr>
+
+        <tr>
+          <th>Class</th>
+          <th>Align Items</th>
+        </tr>
+
+        <tr>
+          <td>items-start</td>
+          <td>flex-start</td>
+        </tr>
+
+        <tr>
+          <td>items-end</td>
+          <td>flex-end</td>
+        </tr>
+
+        <tr>
+          <td>items-center</td>
+          <td>center</td>
+        </tr>
+
+        <tr>
+          <td>items-baseline</td>
+          <td>baseline</td>
+        </tr>
+
+        <tr>
+          <td>items-stretch</td>
+          <td>stretch</td>
+        </tr>
+
+        <tr>
+          <th>Class</th>
+          <th>Flex Wrap</th>
+        </tr>
+
+        <tr>
+          <td>wrap</td>
+          <td>flex wrap</td>
+        </tr>
+
+        <tr>
+          <td>wrap-reverse</td>
+          <td>flex wrap reverse</td>
+        </tr>
+
+        <tr>
+          <td>nowrap</td>
+          <td>flex no wrap</td>
+        </tr>
+      </table>
+
+      <h4>Percentage</h4>
+      <table>
+        <tr>
+          <th>Label</th>
+          <th>Percentage Value</th>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>0%</td>
+        </tr>
+        <tr>
+          <td>25</td>
+          <td>25%</td>
+        </tr>
+        <tr>
+          <td>75</td>
+          <td>75%</td>
+        </tr>
+        <tr>
+          <td>100%</td>
+          <td>100%</td>
+        </tr>
+        <tr>
+          <td>full</td>
+          <td>100%</td>
+        </tr>
+        <tr>
+          <th>Class Name</th>
+          <th>Usage</th>
+        </tr>
+        <tr>
+          <td>w-*</td>
+          <td>Width</td>
+        </tr>
+        <tr>
+          <td>h-*</td>
+          <td>Height</td>
+        </tr>
+        <tr>
+          <td>h-screen</td>
+          <td>100 view height</td>
+        </tr>
+        <tr>
+          <td>w-screen</td>
+          <td>100 view width</td>
+        </tr>
+      </table>
+
+      <h4>Container</h4>
+      <table>
+        <tr>
+          <th>Class</th>
+          <th>Usage</th>
+        </tr>
+        <tr>
+          <td>container</td>
+          <td>Add some padding for better spacing</td>
+        </tr>
+        <tr>
+          <th>Screen Sizes</th>
+          <th>Style</th>
+        </tr>
+        <tr>
+          <td>&lt;768px</td>
+          <td>padding: 40px 5%</td>
+        </tr>
+        <tr>
+          <td>Normal</td>
+          <td>padding: 50px 10%</td>
+        </tr>
+        <tr>
+          <td>&gt;1400px</td>
+          <td>padding: 60px 15%</td>
+        </tr>
+      </table>
+
+      <h4>Cursor</h4>
+
+      <table>
+        <tr>
+          <th>Class</th>
+          <th>Usage</th>
+        </tr>
+        <tr>
+          <td>cursor-default</td>
+          <td>Cursor: default</td>
+        </tr>
+        <tr>
+          <td>cursor-pointer</td>
+          <td>Cursor: pointer</td>
+        </tr>
+      </table>
+
+      <h4>Border Radius</h4>
+
+      <table>
+        <tr>
+          <th>Class</th>
+          <th>Usage</th>
+        </tr>
+        <tr>
+          <td>rounded</td>
+          <td>Border Radius 5px</td>
+        </tr>
+        <tr>
+          <td>rounded-full</td>
+          <td>Border Radius 99999px</td>
+        </tr>
+      </table>
+
+      <h4>Responsive Image</h4>
+      <pre>
+        <code class="language-css">.responsive-image {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}</code>
+      </pre>
+
+      <h4>Text Align</h4>
+      <table>
+        <tr>
+          <th>Class</th>
+          <th>Text Align</th>
+        </tr>
+        <tr>
+          <td>text-left</td>
+          <td>left</td>
+        </tr>
+
+        <tr>
+          <td>text-center</td>
+          <td>center</td>
+        </tr>
+
+        <tr>
+          <td>text-right</td>
+          <td>right</td>
+        </tr>
+
+        <tr>
+          <td>text-justify</td>
+          <td>justify</td>
+        </tr>
+      </table>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
     <script>
       hljs.highlightAll();

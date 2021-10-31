@@ -1,14 +1,10 @@
 @each $key, $value in $colors {
-  .text {
-    &-#{$key} {
-      color: $value;
-    }
+  .text-#{$key} {
+    color: $value;
   }
 
-  .bg {
-    &-#{$key} {
-      background: $value;
-    }
+  .bg-#{$key} {
+    background: $value;
   }
 }
 
