@@ -55,8 +55,7 @@
 
       <h1 class="mt-4">Installation</h1>
       <pre>
-        <code id="installation-code" class="language-html">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/napthedev/squishyui/css/main.min.css"&gt;</code>
-        <button class="no-squishy"  data-clipboard-target="#installation-code"><i class="far fa-clipboard"></i></button>
+        <code class="language-html">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/napthedev/squishyui/css/main.min.css"&gt;</code>
       </pre>
 
       <h1>Alert</h1>
@@ -122,16 +121,16 @@
       <pre>
         <code class="language-html">&lt;div class="breadcrumb"&gt;
   &lt;div class="breadcrumb-item"&gt;
-    &lt;a&gt; href="#"&gt;Home&lt;/a&gt;
+    &lt;a href="#"&gt;Home&lt;/a&gt;
   &lt;/div&gt;
   &lt;div class="breadcrumb-item"&gt;
-    &lt;a&gt; href="#"&gt;User&lt;/a&gt;
+    &lt;a href="#"&gt;User&lt;/a&gt;
   &lt;/div&gt;
   &lt;div class="breadcrumb-item"&gt;
-    &lt;a&gt; href="#"&gt;Library&lt;/a&gt;
+    &lt;a href="#"&gt;Library&lt;/a&gt;
   &lt;/div&gt;
   &lt;div class="breadcrumb-item"&gt;
-    &lt;a&gt; href="#"&gt;Images&lt;/a&gt;
+    &lt;a href="#"&gt;Images&lt;/a&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code>
       </pre>
@@ -546,15 +545,12 @@
 
       <pre>
         <code class="language-html">&lt;div&gt;
-  &lt;h3&gt;Checkbox&lt;/h3&gt;
-  &lt;div&gt;
-    &lt;input class="input-checkbox" type="checkbox" id="checkbox-1" /&gt;
-    &lt;label&gt; for="checkbox-1"&gt;Coding&lt;/label&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;input class="input-checkbox" type="checkbox" id="checkbox-2" /&gt;
-    &lt;label&gt; for="checkbox-2"&gt;Sleeping&lt;/label&gt;
-  &lt;/div&gt;
+  &lt;input class="input-checkbox" type="checkbox" id="checkbox-1" /&gt;
+  &lt;label for="checkbox-1"&gt;Coding&lt;/label&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;input class="input-checkbox" type="checkbox" id="checkbox-2" /&gt;
+  &lt;label for="checkbox-2"&gt;Sleeping&lt;/label&gt;
 &lt;/div&gt;</code>
       </pre>
 
@@ -667,12 +663,12 @@
 
       <pre>
         <code class="language-html">&lt;svg class="circular-progress" viewBox="25 25 50 50"&gt;
-  &lt;circle&gt; cx="50" cy="50" r="20"&gt;&lt;/circle&gt;
+  &lt;circle cx="50" cy="50" r="20"&gt;&lt;/circle&gt;
 &lt;/svg&gt;
 
 &lt;!-- Customize the color --&gt;
 &lt;svg class="circular-progress" viewBox="25 25 50 50"&gt;
-  &lt;circle&gt; style="stroke: red" cx="50" cy="50" r="20"&gt;&lt;/circle&gt;
+  &lt;circle style="stroke: red" cx="50" cy="50" r="20"&gt;&lt;/circle&gt;
 &lt;/svg&gt;</code>
       </pre>
 
@@ -1224,6 +1220,14 @@
     <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
     <script>
+      const pre = document.querySelectorAll("pre");
+      pre.forEach((item, index) => {
+        const code = item.querySelector("code");
+        code.id = `code-${index}`;
+
+        item.innerHTML += `<button data-clipboard-target="#code-${index}"><i class="far fa-clipboard"></i></button>`;
+      });
+
       hljs.highlightAll();
       new ClipboardJS("[data-clipboard-target]");
     </script>
