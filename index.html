@@ -42,23 +42,41 @@
     </style>
   </head>
   <body>
-    <div class="flex flex-row-reverse">
-      <p class="mt-5 mr-5">
-        Give me a star: <span class="cursor-pointer" onclick="window.open('https://github.com/napthedev/squishyui')"><i class="fab fa-github"></i> Github</span>
-      </p>
-    </div>
     <div class="container">
+      <div class="flex flex-row-reverse">
+        <p>
+          Give me a star: <span class="cursor-pointer" onclick="window.open('https://github.com/napthedev/squishyui')"><i class="fab fa-github"></i> Github</span>
+        </p>
+      </div>
       <div class="flex flex-col items-center">
         <img class="responsive-image" src="https://i.imgur.com/ffkMKUe.png" alt="" />
         <h2 class="text-center">The CSS Only framework for your application</h2>
       </div>
 
-      <h1 class="mt-4">Installation</h1>
+      <h1 class="mt-4" id="installation">Installation</h1>
       <pre>
         <code class="language-html">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/napthedev/squishyui/css/main.min.css"&gt;</code>
       </pre>
 
-      <h1>Alert</h1>
+      <h1>Components</h1>
+      <div class="list">
+        <a href="#alert">Alert</a>
+        <a href="#avatar">Avatar</a>
+        <a href="#breadcrumb">Breadcrumb</a>
+        <a href="#button">Button</a>
+        <a href="#card">Card</a>
+        <a href="#collapse">Collapse</a>
+        <a href="#drawer">Drawer</a>
+        <a href="#dropdown">Dropdown</a>
+        <a href="#form">Form</a>
+        <a href="#list">List</a>
+        <a href="#modal">Modal</a>
+        <a href="#progress">Progress</a>
+        <a href="#skeleton">Skeleton</a>
+        <a href="#tooltips">Tooltips</a>
+      </div>
+
+      <h1 id="alert">Alert</h1>
 
       <div>
         <div class="alert">Normal Alert</div>
@@ -76,7 +94,7 @@
 &lt;div class="alert alert-error"&gt;Error Alert&lt;/div&gt;</code>
       </pre>
 
-      <h1>Avatar</h1>
+      <h1 id="avatar">Avatar</h1>
 
       <p>Rounded Avatar</p>
       <div>
@@ -102,7 +120,7 @@
 &lt;img class="avatar-lg" src="Large Avatar Src" alt="" /&gt;</code>
       </pre>
 
-      <h1>Breadcrumb</h1>
+      <h1 id="breadcrumb">Breadcrumb</h1>
       <div class="breadcrumb">
         <div class="breadcrumb-item">
           <a href="#">Home</a>
@@ -135,7 +153,7 @@
 &lt;/div&gt;</code>
       </pre>
 
-      <h1>Buttons</h1>
+      <h1 id="button">Buttons</h1>
 
       <p>Colors</p>
       <div>
@@ -307,7 +325,7 @@
 &lt;/button&gt;</code>
       </pre>
 
-      <h1>Card</h1>
+      <h1 id="card">Card</h1>
       <div class="card" style="width: 100%; max-width: 400px">
         <div class="card-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed eveniet vel, aut hic nam, reprehenderit officiis enim id, accusantium iusto quis architecto tempora iste cupiditate impedit cumque ex officia. Nisi?</div>
       </div>
@@ -318,7 +336,7 @@
 &lt;/div&gt;</code>
       </pre>
 
-      <h1>Collapse</h1>
+      <h1 id="collapse">Collapse</h1>
 
       <p>Accordion</p>
       <div class="collapse" tabindex="0">
@@ -366,7 +384,7 @@
 &lt;/div&gt;</code>
       </pre>
 
-      <h1>Drawer</h1>
+      <h1 id="drawer">Drawer</h1>
 
       <div>
         <input type="checkbox" class="drawer-control" id="drawer-left-control" name="drawer-left-control" />
@@ -388,15 +406,15 @@
       <pre>
         <code class="language-html">&lt;!-- Important div to separate drawers. Don't remove it --&gt;
 &lt;div&gt;
-  &lt;input type="checkbox" class="drawer-control" id="drawer-control" name="drawer-control" /&gt;
-  &lt;label class="btn" for="drawer-control"&gt;Open drawer&lt;/label&gt;
-  &lt;label for="drawer-control" class="drawer-background"&gt;&lt;/label&gt;
+  &lt;input type="checkbox" class="drawer-control" id="drawer-left-control" name="drawer-left-control" /&gt;
+  &lt;label class="btn" for="drawer-left-control"&gt;Open drawer&lt;/label&gt;
+  &lt;label for="drawer-left-control" class="drawer-background"&gt;&lt;/label&gt;
   &lt;div class="drawer"&gt;
     &lt;div class="drawer-header"&gt;
       &lt;h3&gt;Drawer Title&lt;/h3&gt;
-      &lt;label for="drawer-control" class="cursor-pointer squishy"&gt;
+      &lt;label for="drawer-left-control" class="cursor-pointer squishy"&gt;
       &lt;!-- Icon goes here --&gt;
-      &lt;!-- For example: &lt;i&gt; class="fa fa-times" style="font-size: 25px"&gt;&lt;/i&gt; --&gt;
+      &lt;!-- For example: &lt;i class="fa fa-times" style="font-size: 25px"&gt;&lt;/i&gt; --&gt;
       &lt;/label&gt;
     &lt;/div&gt;
     &lt;div class="drawer-content"&gt;
@@ -437,7 +455,7 @@
       &lt;h3&gt;Drawer Title&lt;/h3&gt;
       &lt;label for="drawer-control" class="cursor-pointer squishy"&gt;
       &lt;!-- Icon goes here --&gt;
-      &lt;!-- For example: &lt;i&gt; class="fa fa-times" style="font-size: 25px"&gt;&lt;/i&gt; --&gt;
+      &lt;!-- For example: &lt;i class="fa fa-times" style="font-size: 25px"&gt;&lt;/i&gt; --&gt;
       &lt;/label&gt;
     &lt;/div&gt;
     &lt;div class="drawer-content"&gt;
@@ -448,7 +466,7 @@
 &lt;/div&gt;</code>
       </pre>
 
-      <h1>Dropdown</h1>
+      <h1 id="dropdown">Dropdown</h1>
 
       <p>Use with button</p>
       <div class="flex">
@@ -518,7 +536,7 @@
 &lt;/div&gt;</code>
       </pre>
 
-      <h1>Form</h1>
+      <h1 id="form">Form</h1>
 
       <div>
         <h3>Input</h3>
@@ -585,7 +603,7 @@
 &lt;/div&gt;</code>
 </pre>
 
-      <h1>List</h1>
+      <h1 id="list">List</h1>
       <div class="list">
         <div>List Item 1</div>
         <div>List Item 2</div>
@@ -606,7 +624,7 @@
 &lt;/div&gt;</code>
       </pre>
 
-      <h1>Modal</h1>
+      <h1 id="modal">Modal</h1>
 
       <div>
         <input type="checkbox" class="modal-control" id="modal-control" name="modal-control" />
@@ -650,7 +668,7 @@
 
       <!-- Navbar -->
 
-      <h1>Progress</h1>
+      <h1 id="progress">Progress</h1>
       <div>
         <svg class="circular-progress" viewBox="25 25 50 50">
           <circle cx="50" cy="50" r="20"></circle>
@@ -672,7 +690,7 @@
 &lt;/svg&gt;</code>
       </pre>
 
-      <h1>Skeleton</h1>
+      <h1 id="skeleton">Skeleton</h1>
       <div>
         <div class="skeleton rounded-full"></div>
         <div class="skeleton mt-3 w-full"></div>
@@ -683,7 +701,7 @@
 &lt;div class="skeleton mt-3 w-full"&gt;&lt;/div<&gt;</code>
       </pre>
 
-      <h1>Tooltips</h1>
+      <h1 id="tooltips">Tooltips</h1>
       <div class="flex flex-row-reverse">
         <button class="tooltips" data-tooltips="Top">Tooltips Top</button>
       </div>
@@ -704,7 +722,7 @@
 &lt;button class="tooltips tooltips-right" data-tooltips="Right"&gt;Tooltips Right&lt;/button&gt;</code>
       </pre>
 
-      <h1>Utility Classes</h1>
+      <h1 id="utility">Utility Classes</h1>
 
       <h4>Squishy</h4>
       <table>
